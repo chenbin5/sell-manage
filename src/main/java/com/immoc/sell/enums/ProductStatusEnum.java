@@ -1,4 +1,4 @@
-package com.immoc.sell.util;
+package com.immoc.sell.enums;
 
 import lombok.Getter;
 
@@ -14,5 +14,4 @@ public enum ProductStatusEnum {
         this.code = code;
         this.message = message;
     }
-
 }

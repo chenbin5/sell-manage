@@ -1,13 +1,12 @@
 package com.immoc.sell.service.impl;
 
 import com.immoc.sell.dataobject.ProductInfo;
+import com.immoc.sell.enums.ProductStatusEnum;
 import com.immoc.sell.repository.ProductInfoRespository;
 import com.immoc.sell.service.ProductInfoService;
-import com.immoc.sell.util.ProductStatusEnum;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
