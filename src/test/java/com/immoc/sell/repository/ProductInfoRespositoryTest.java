@@ -2,6 +2,7 @@ package com.immoc.sell.repository;
 
 import com.alibaba.fastjson.JSONObject;
 import com.immoc.sell.dataobject.ProductInfo;
+import com.immoc.sell.util.KeyUtil;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,11 +24,11 @@ public class ProductInfoRespositoryTest {
     @Test
     public void saveTest() {
         ProductInfo productInfo = new ProductInfo();
-        productInfo.setProductId("123456");
-        productInfo.setProductName("皮蛋瘦肉粥");
+        productInfo.setProductId(KeyUtil.genUniqueKey());
+        productInfo.setProductName("麻辣小龙虾");
         productInfo.setProductPrice(new BigDecimal(3.5));
-        productInfo.setProductStock(12);
-        productInfo.setProductDescription("很不错的粥");
+        productInfo.setProductStock(100);
+        productInfo.setProductDescription("很好吃");
         productInfo.setProductIcon("http://xxx.jpg");
         productInfo.setProductStatus(0);
         productInfo.setCategroyType(1);
