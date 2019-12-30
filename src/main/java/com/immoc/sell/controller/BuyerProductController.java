@@ -83,6 +83,7 @@ public class BuyerProductController {
     @ResponseBody
     public void uploadImage(@RequestParam(value="file",required = false) MultipartFile[] files) {
         System.out.println("~~~~~本次上传的图片张数为：~~~~" + files.length + "张~~~~~~~~");
+        long beginTime = System.currentTimeMillis();
         String filePath = "E:/20191230image";
         if (files.length != 0) {
             for (MultipartFile multipartFile : files) {
@@ -95,6 +96,7 @@ public class BuyerProductController {
                 }
             }
         }
+        System.out.println("~~~~ 上传打印完毕，总耗时： ~~~~" + (System.currentTimeMillis() - beginTime));
     }
 
     /**
@@ -112,9 +114,9 @@ public class BuyerProductController {
         File file1 = new File(filePath +"/"+ fileName);
         FileOutputStream out = new FileOutputStream(file1);
         out.write(file);
-        System.out.println("~~~~~ 开始打印照片 ~~~~~");
+        //System.out.println("~~~~~ 开始打印照片 ~~~~~");
         PDFPrint(file1,"HP LaserJet MFP M427fdw");
-        System.out.println("~~~~~ 打印照结束 ~~~~~~");
+        //System.out.println("~~~~~ 打印照结束 ~~~~~~");
         //删除图片
         String result = delFile(file1);
         System.out.println("删除返回结果为：" + result);
