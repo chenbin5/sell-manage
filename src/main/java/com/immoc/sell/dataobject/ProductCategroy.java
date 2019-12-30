@@ -29,4 +29,44 @@ public class ProductCategroy {
     private Date createTime;
     /**更新时间*/
     private Date updateTime;
+
+    public Integer getCategroyId() {
+        return categroyId;
+    }
+
+    public String getCategroyName() {
+        return categroyName;
+    }
+
+    public Integer getCategroyType() {
+        return categroyType;
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public Date getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setCategroyId(Integer categroyId) {
+        this.categroyId = categroyId;
+    }
+
+    public void setCategroyName(String categroyName) {
+        this.categroyName = categroyName;
+    }
+
+    public void setCategroyType(Integer categroyType) {
+        this.categroyType = categroyType;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
+    public void setUpdateTime(Date updateTime) {
+        this.updateTime = updateTime;
+    }
 }

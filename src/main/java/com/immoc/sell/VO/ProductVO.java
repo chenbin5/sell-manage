@@ -21,4 +21,27 @@ public class ProductVO {
     @JsonProperty("foods")
     private List<ProductInfoVO> productInfoVos;
 
+    public String getCategroyName() {
+        return categroyName;
+    }
+
+    public Integer getCategroyType() {
+        return categroyType;
+    }
+
+    public List<ProductInfoVO> getProductInfoVos() {
+        return productInfoVos;
+    }
+
+    public void setCategroyName(String categroyName) {
+        this.categroyName = categroyName;
+    }
+
+    public void setCategroyType(Integer categroyType) {
+        this.categroyType = categroyType;
+    }
+
+    public void setProductInfoVos(List<ProductInfoVO> productInfoVos) {
+        this.productInfoVos = productInfoVos;
+    }
 }
