@@ -21,6 +21,7 @@ public class LoggerTest {
 
     @Test
     public void test() {
+
         String userName = "zhangsan";
         String passWord = "123456";
         logger.info("name：" + userName + ", passWord：" + passWord);
